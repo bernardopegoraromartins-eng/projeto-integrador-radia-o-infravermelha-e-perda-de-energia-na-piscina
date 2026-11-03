@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page moderna e interativa">
+    <meta name="keywords" content="html, css, javascript, landing page">
+    <meta name="author" content="Dev">
+    <title>NovaTech - Inovação Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <!-- ========== CANVAS DE PARTÍCULAS ========== -->
+    <canvas id="particlesCanvas"></canvas>
+
+    <!-- ========== BARRA DE PROGRESSO ========== -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ========== BOTÃO VOLTAR AO TOPO ========== -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Voltar ao topo">
+        <span>↑</span>
+    </button>
+
+    <!-- ========== HEADER / NAVEGAÇÃO ========== -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">Nova<span class="highlight">Tech</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="btn btn-primary" id="ctaBtn">Começar</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-badge">✨ Novo em 2026</span>
+                <h1 class="hero-title">
+                    Transforme suas <span class="gradient-text">ideias</span> em
+                    <span class="gradient-text">realidade digital</span>
+                </h1>
+                <p class="hero-description">
+                    Criamos experiências digitais incríveis que conectam marcas
+                    a pessoas. Design moderno, tecnologia de ponta e resultados reais.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large">
+                        <span>Começar agora</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-outline btn-large">
+                        <span class="play-icon">▶</span>
+                        <span>Ver demo</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projetos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Suporte</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <div class="card-icon">📊</div>
+                    <div class="card-content">
+                        <span class="card-title">Analytics</span>
+                        <span class="card-value">+127%</span>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">💡</div>
+                    <div class="card-content">
+                        <span class="card-title">Inovação</span>
+                        <span class="card-value">Top 1%</span>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">⚡</div>
+                    <div class="card-content">
+                        <span class="card-title">Performance</span>
+                        <span class="card-value">99/100</span>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="window-title">main.js</span>
+                            </div>
+                            <pre class="code-content"><code><span class="keyword">const</span> <span class="variable">projeto</span> = {
+  <span class="property">nome</span>: <span class="string">"Seu Sucesso"</span>,
+  <span class="property">tecnologia</span>: <span class="string">"Moderna"</span>,
+  <span class="property">qualidade</span>: <span class="string">"Excelente"</span>,
+  <span class="property">suporte</span>: <span class="keyword">true</span>
+};
+
+<span class="keyword">function</span> <span class="function">iniciar</span>() {
+  <span class="keyword">return</span> <span class="string">"🚀 Vamos lá!"</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Role para baixo</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO SOBRE ========== -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Sobre nós</span>
+                <h2 class="section-title">Conheça nossa <span class="gradient-text">história</span></h2>
+                <p class="section-description">
+                    Somos apaixonados por criar soluções digitais que fazem a diferença.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-card">
+                        <div class="experience-badge">
+                            <span class="exp-number">10+</span>
+                            <span class="exp-text">Anos de<br>experiência</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Transformando o futuro digital, um projeto de cada vez</h3>
+                    <p>
+                        Desde 2016, ajudamos empresas de todos os tamanhos a alcançarem
+                        seus objetivos através de soluções tecnológicas inovadoras.
+                        Nossa equipe combina criatividade, expertise técnica e paixão
+                        para entregar resultados excepcionais.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Equipe especializada</h4>
+                                <p>Profissionais certificados e experientes</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Tecnologia de ponta</h4>
+                                <p>Sempre atualizados com as últimas tendências</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✓</span>
+                            <div>
+                                <h4>Suporte dedicado</h4>
+                                <p>Acompanhamento em todas as etapas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO SERVIÇOS ========== -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossos serviços</span>
+                <h2 class="section-title">O que <span class="gradient-text">oferecemos</span></h2>
+                <p class="section-description">
+                    Soluções completas para impulsionar seu negócio digital.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up">
+                    <div class="service-icon">🎨</div>
+                    <h3>Design UI/UX</h3>
+                    <p>Interfaces intuitivas e experiências memoráveis que encantam seus usuários.</p>
+                    <ul class="service-features">
+                        <li>Prototipação</li>
+                        <li>Design System</li>
+                        <li>Testes de usabilidade</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <span class="popular-badge">Popular</span>
+                    <div class="service-icon">💻</div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites e aplicações web modernas, rápidas e otimizadas para conversão.</p>
+                    <ul class="service-features">
+                        <li>React / Vue / Angular</li>
+                        <li>Node.js / Python</li>
+                        <li>Banco de dados</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">📱</div>
+                    <h3>Apps Mobile</h3>
+                    <p>Aplicativos nativos e híbridos para iOS e Android com performance excepcional.</p>
+                    <ul class="service-features">
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>Publicação nas stores</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">🚀</div>
+                    <h3>Marketing Digital</h3>
+                    <p>Estratégias completas para aumentar sua visibilidade e converter mais clientes.</p>
+                    <ul class="service-features">
+                        <li>SEO avançado</li>
+                        <li>Tráfego pago</li>
+                        <li>Analytics</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Infraestrutura escalável e automatizada para sua aplicação crescer sem limites.</p>
+                    <ul class="service-features">
+                        <li>AWS / Azure / GCP</li>
+                        <li>CI/CD</li>
+                        <li>Monitoramento</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-icon">🤖</div>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Soluções com IA para automatizar processos e gerar insights valiosos.</p>
+                    <ul class="service-features">
+                        <li>Machine Learning</li>
+                        <li>Chatbots</li>
+                        <li>Análise preditiva</li>
+                    </ul>
+                    <a href="#" class="service-link">Saiba mais →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO ESTATÍSTICAS ========== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <span class="stat-counter" data-target="500">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-name">Projetos entregues</span>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-info">
+                        <span class="stat-counter" data-target="350">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-name">Clientes satisfeitos</span>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">👨‍💻</div>
+                    <div class="stat-info">
+                        <span class="stat-counter" data-target="45">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-name">Especialistas</span>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-info">
+                        <span class="stat-counter" data-target="25">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-name">Países atendidos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO PORTFÓLIO ========== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfólio</span>
+                <h2 class="section-title">Nossos <span class="gradient-text">trabalhos</span></h2>
+                <p class="section-description">
+                    Conheça alguns dos projetos que desenvolvemos com excelência.
+                </p>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <span class="portfolio-category">Web</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>E-commerce Premium</h3>
+                        <p>Plataforma completa de vendas online</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <span class="portfolio-category">Mobile</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>App Fitness</h3>
+                        <p>Aplicativo de acompanhamento físico</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <span class="portfolio-category">Design</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Branding Corporativo</h3>
+                        <p>Identidade visual completa</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="marketing">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <span class="portfolio-category">Marketing</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Campanha Digital</h3>
+                        <p>Estratégia de marketing 360°</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #30cfd0, #330867);">
+                        <span class="portfolio-category">Web</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard SaaS</h3>
+                        <p>Painel administrativo moderno</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                        <span class="portfolio-category">Mobile</span>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>App Delivery</h3>
+                        <p>Plataforma de entregas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO DEPOIMENTOS ========== -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O que nossos <span class="gradient-text">clientes</span> dizem</h2>
+                <p class="section-description">
+                    Histórias reais de quem confiou em nosso trabalho.
+                </p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "A equipe da NovaTech superou todas as expectativas! O projeto foi entregue
+                            antes do prazo e com qualidade excepcional. Recomendo fortemente!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">M</div>
+                            <div class="author-info">
+                                <h4>Maria Silva</h4>
+                                <span>CEO, TechStart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Profissionalismo do início ao fim. O app que desenvolveram para nós
+                            aumentou nossas vendas em 200%. Parceria de longo prazo garantida!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">J</div>
+                            <div class="author-info">
+                                <h4>João Santos</h4>
+                                <span>Diretor, InovaCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Atendimento impecável e resultados surpreendentes. A NovaTech entende
+                            realmente as necessidades do cliente e entrega soluções sob medida."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">A</div>
+                            <div class="author-info">
+                                <h4>Ana Oliveira</h4>
+                                <span>Marketing, GlobalBrand</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Trabalhar com a NovaTech foi uma experiência transformadora. Eles não
+                            apenas entregaram um produto, mas construíram uma parceria verdadeira."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background: linear-gradient(135deg, #fa709a, #fee140);">P</div>
+                            <div class="author-info">
+                                <h4>Pedro Costa</h4>
+                                <span>Fundador, StartupX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">←</button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn next" id="nextBtn" aria-label="Próximo">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO PREÇOS ========== -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Planos</span>
+                <h2 class="section-title">Escolha o plano <span class="gradient-text">ideal</span></h2>
+                <p class="section-description">
+                    Opções flexíveis para cada necessidade e orçamento.
+                </p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label">Mensal</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricingToggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Anual <span class="save-badge">-20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Starter</h3>
+                    <p class="plan-description">Para quem está começando</p>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="97" data-yearly="77">97</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> 1 projeto</li>
+                        <li><span class="check">✓</span> 5GB de armazenamento</li>
+                        <li><span class="check">✓</span> Suporte por email</li>
+                        <li><span class="check">✓</span> Atualizações básicas</li>
+                        <li class="disabled"><span class="cross">✗</span> Analytics avançado</li>
+                        <li class="disabled"><span class="cross">✗</span> Suporte prioritário</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Escolher plano</button>
+                </div>
+                <div class="pricing-card featured">
+                    <span class="best-badge">Mais popular</span>
+                    <h3 class="plan-name">Professional</h3>
+                    <p class="plan-description">Para negócios em crescimento</p>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="297" data-yearly="237">297</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> 10 projetos</li>
+                        <li><span class="check">✓</span> 50GB de armazenamento</li>
+                        <li><span class="check">✓</span> Suporte prioritário</li>
+                        <li><span class="check">✓</span> Todas as atualizações</li>
+                        <li><span class="check">✓</span> Analytics avançado</li>
+                        <li class="disabled"><span class="cross">✗</span> API dedicada</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Escolher plano</button>
+                </div>
+                <div class="pricing-card">
+                    <h3 class="plan-name">Enterprise</h3>
+                    <p class="plan-description">Para grandes empresas</p>
+                    <div class="plan-price">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value" data-monthly="797" data-yearly="637">797</span>
+                        <span class="price-period">/mês</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="check">✓</span> Projetos ilimitados</li>
+                        <li><span class="check">✓</span> Armazenamento ilimitado</li>
+                        <li><span class="check">✓</span> Suporte 24/7 dedicado</li>
+                        <li><span class="check">✓</span> Todas as funcionalidades</li>
+                        <li><span class="check">✓</span> Analytics avançado</li>
+                        <li><span class="check">✓</span> API dedicada</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Escolher plano</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO FAQ ========== -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Perguntas <span class="gradient-text">frequentes</span></h2>
+                <p class="section-description">
+                    Tire suas dúvidas sobre nossos serviços.
+                </p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo leva para desenvolver um projeto?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O tempo varia de acordo com a complexidade do projeto. Projetos simples podem levar de 2 a 4 semanas, enquanto projetos mais complexos podem levar de 2 a 6 meses. Sempre fornecemos um cronograma detalhado antes de iniciar.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês oferecem suporte após a entrega?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Todos os nossos planos incluem suporte pós-entrega. Oferecemos planos de manutenção mensal e suporte sob demanda para garantir que seu projeto continue funcionando perfeitamente.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais tecnologias vocês utilizam?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com as tecnologias mais modernas do mercado: React, Vue, Angular, Node.js, Python, PHP, Laravel, entre outras. Escolhemos a stack ideal de acordo com as necessidades específicas de cada projeto.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o processo de pagamento?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com pagamentos parcelados: 30% no início do projeto, 40% na entrega do MVP e 30% na finalização. Aceitamos cartão de crédito, boleto, PIX e transferência bancária.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês atendem clientes de fora do Brasil?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Atendemos clientes em mais de 25 países. Nossa equipe é preparada para trabalhar em diferentes fusos horários e idiomas, garantindo uma comunicação eficiente em qualquer lugar do mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SEÇÃO CONTATO ========== -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contato</span>
+                <h2 class="section-title">Vamos <span class="gradient-text">conversar</span>?</h2>
+                <p class="section-description">
+                    Entre em contato e transforme sua ideia em realidade.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informações de contato</h3>
+                    <p>Estamos prontos para atender você. Escolha o canal de sua preferência.</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contato@novatech.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>+55 (11) 99999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Paulista, 1000 - São Paulo, SP</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h4>Horário</h4>
+                                <p>Seg - Sex: 9h às 18h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome completo</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999">
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione...</option>
+                                <option value="projeto">Novo projeto</option>
+                                <option value="orcamento">Solicitar orçamento</option>
+                                <option value="suporte">Suporte técnico</option>
+                                <option value="parceria">Parceria</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre seu projeto..." required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                            Aceito os termos de uso e política de privacidade
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full btn-large">
+                        <span>Enviar mensagem</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Receba novidades e dicas</h2>
+                <p>Inscreva-se e fique por dentro das últimas tendências do mundo digital.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Seu melhor email" required>
+                    <button type="submit" class="btn btn-primary">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">Nova<span class="highlight">Tech</span></span>
+                    </a>
+                    <p class="footer-description">
+                        Transformando ideias em realidade digital desde 2016.
+                        Sua parceira de confiança em tecnologia.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre nós</a></li>
+                        <li><a href="#">Carreiras</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Design UI/UX</a></li>
+                        <li><a href="#">Desenvolvimento Web</a></li>
+                        <li><a href="#">Apps Mobile</a></li>
+                        <li><a href="#">Marketing Digital</a></li>
+                        <li><a href="#">Consultoria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Documentação</a></li>
+                        <li><a href="#">Status do sistema</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NovaTech. Todos os direitos reservados.</p>
+                <p>Feito com ❤️ no Brasil</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== MODAL ========== -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-icon">✨</div>
+                <h2>Bem-vindo!</h2>
+                <p>Obrigado por visitar nosso site. Como podemos ajudar você hoje?</p>
+                <button class="btn btn-primary btn-full">Começar agora</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
